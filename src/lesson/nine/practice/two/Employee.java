@@ -28,13 +28,15 @@ public class Employee {
 		this.phoneNumber = builder.phoneNumber;
 	}
 
-//	@Override
-//	public String toString() {
-//		String scottString = "";
-//		scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName +
-//				"\n" + "jobTitle = " + this.jobTitle + "\n" + "salary = $" + this.salary;
-//		return scottString;
-//	}
+	@Override
+	public String toString() {
+		String scottString = "";
+		scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName +
+				"\n" + "jobTitle = " + this.jobTitle + "\n" + "salary = $" + this.salary + "\n" +
+				"City = " + this.city + "\n" + "state = $" + this.state + "\n" + "zipCode = " +
+				this.zipCode;
+		return scottString;
+	}
 
 	public String getFirstName() {
 		return firstName;
@@ -81,11 +83,11 @@ public class Employee {
 		private float salary;
 
 		// optional
-		private String streetAddress = "";
-		private String city = "";
-		private String state = "";
-		private int zipCode = 00000;
-		private String phoneNumber = "000-000-0000";
+		private String streetAddress;
+		private String city;
+		private String state;
+		private int zipCode;
+		private String phoneNumber;
 
 		public EmployeeBuilder(String firstName, String lastName, String jobTitle, float salary) {
 			this.firstName = firstName;
@@ -94,24 +96,29 @@ public class Employee {
 			this.salary = salary;
 		}
 
-		public void setStreetAddress(String streetAddress) {
+		public EmployeeBuilder setStreetAddress(String streetAddress) {
 			this.streetAddress = streetAddress;
+			return this;
 		}
 
-		public void setCity(String city) {
+		public EmployeeBuilder setCity(String city) {
 			this.city = city;
+			return this;
 		}
 
-		public void setState(String state) {
+		public EmployeeBuilder setState(String state) {
 			this.state = state;
+			return this;
 		}
 
-		public void setZipCode(int zipCode) {
+		public EmployeeBuilder setZipCode(int zipCode) {
 			this.zipCode = zipCode;
+			return this;
 		}
 
-		public void setPhoneNumber(String phoneNumber) {
+		public EmployeeBuilder setPhoneNumber(String phoneNumber) {
 			this.phoneNumber = phoneNumber;
+			return this;
 		}
 
 		public Employee build() {
@@ -122,8 +129,8 @@ public class Employee {
 		public String toString() {
 
 			String scottString = "";
-			scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName + "\n" + this.jobTitle
-					+ "\n" + this.salary;
+			scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName +
+					"\n" + this.jobTitle + "\n" + this.salary;
 
 			return scottString;
 		}

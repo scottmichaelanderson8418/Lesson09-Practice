@@ -11,10 +11,19 @@ public class MainCorrect {
 
 		// complex Employee object using additional setters from EmployeeBuilder class
 		EmployeeCorrect patEmployee = new EmployeeCorrect.EmployeeBuilder("Pat", "Green", "Chemist",
-				70000f).setPhoneNumber("555-123-4567").setStreetAddress("123 Alphabet St.")
-						.setCity("Tempe").setState("Arizona").setZip(85281).build();
+				70000f)
+				.setPhoneNumber("555-123-4567")
+				.setStreetAddress("123 Alphabet St.")
+				.setCity("Gastonia")
+				.setState("North Carolina")
+				.setZip(28056)
+				.build();
+//						.setCity("Tempe").setState("Arizona").setZip(85281).build();
 		
 		
+		
+		
+		System.out.println(patEmployee.toString());
 		
 		System.out.println(patEmployee.getFirstName() + " " + patEmployee.getLastName() +
 				" makes " + patEmployee.getSalary() + " as a " + patEmployee.getJobTitle() +
