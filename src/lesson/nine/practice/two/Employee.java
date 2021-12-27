@@ -44,8 +44,8 @@ public class Employee {
 		return lastName;
 	}
 
-	public String getPhoneNumber() {
-		return phoneNumber;
+	public String getJobTitle() {
+		return jobTitle;
 	}
 
 	public float getSalary() {
@@ -58,6 +58,18 @@ public class Employee {
 
 	public String getCity() {
 		return city;
+	}
+
+	public String getState() {
+		return state;
+	}
+
+	public int getZipCode() {
+		return zipCode;
+	}
+
+	public String getPhoneNumber() {
+		return phoneNumber;
 	}
 
 	// ****************************************************************************************************
@@ -79,22 +91,6 @@ public class Employee {
 			this.firstName = firstName;
 			this.lastName = lastName;
 			this.jobTitle = jobTitle;
-			this.salary = salary;
-		}
-
-		public void setFirstName(String firstName) {
-			this.firstName = firstName;
-		}
-
-		public void setLastName(String lastName) {
-			this.lastName = lastName;
-		}
-
-		public void setJobTitle(String jobTitle) {
-			this.jobTitle = jobTitle;
-		}
-
-		public void setSalary(float salary) {
 			this.salary = salary;
 		}
 
@@ -126,8 +122,8 @@ public class Employee {
 		public String toString() {
 
 			String scottString = "";
-			scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName +
-					"\n" + this.jobTitle + "\n" + this.salary;
+			scottString = "firstName = " + this.firstName + "\n" + "lastName = " + this.lastName + "\n" + this.jobTitle
+					+ "\n" + this.salary;
 
 			return scottString;
 		}

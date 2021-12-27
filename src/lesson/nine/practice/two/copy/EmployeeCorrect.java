@@ -1,10 +1,7 @@
 package lesson.nine.practice.two.copy;
 
-
-
 public class EmployeeCorrect {
-	
-	
+
 	// mandatory parameters
 	private String firstName;
 	private String lastName;
@@ -112,7 +109,7 @@ public class EmployeeCorrect {
 			this.phoneNumber = phoneNumber;
 			return this;
 		}
-		
+
 		public EmployeeCorrect build() {
 			return new EmployeeCorrect(this);
 		}
